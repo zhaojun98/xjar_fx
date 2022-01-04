@@ -8,6 +8,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +27,7 @@ import java.util.Date;
 @Slf4j
 public class XjarMain extends Application {
 
-    /**
+    /**3
      * 启动函数
      * jar -uvfe  xjar_fx.jar com.yl.XjarMain          赋权
      * java -jar xjar_fx.jar com.yl.XjarMain           启动
@@ -125,7 +126,8 @@ public class XjarMain extends Application {
          */
         toButton.setOnAction(e -> {
             FileChooser chooser = new FileChooser(); //设置选择器
-            File file = chooser.showOpenDialog(null);
+            DirectoryChooser directoryChooser=new DirectoryChooser();
+            File file = directoryChooser.showDialog(stage);
             String filepath = file.getParent();     //只获取目录
             chooser.setTitle("选择加密后jar保存位置");
             toText.setText(filepath);
