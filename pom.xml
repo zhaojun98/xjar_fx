@@ -47,7 +47,7 @@
     </dependencies>
     <!--解决：xjar_fx-1.0-SNAPSHOT.jar中没有主清单属性的问题的配置-->
     <build>
-        <finalName>xjar_fx_test</finalName>
+        <finalName>xjarFX</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
