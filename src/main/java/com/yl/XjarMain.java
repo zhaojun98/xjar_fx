@@ -128,7 +128,8 @@ public class XjarMain extends Application {
             FileChooser chooser = new FileChooser(); //设置选择器
             DirectoryChooser directoryChooser=new DirectoryChooser();
             File file = directoryChooser.showDialog(stage);
-            String filepath = file.getParent();     //只获取目录
+            String filepath = file.getAbsolutePath();//只获取目录
+//             String filepath = file.getParent();     //只获取目录
             chooser.setTitle("选择加密后jar保存位置");
             toText.setText(filepath);
 
